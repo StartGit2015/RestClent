@@ -3,18 +3,21 @@
   <metadata>
     <id>Helper.HttpClient</id>
     <version>1.0.0</version>
+    <title>HttpClient Helper for Xamarin Forms</title>
     <authors>Tutu George</authors>
-    <owners>Tutu George</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>https://github.com/tutugeorge/RestClent</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <owners>Tutu George</owners>    
+    <projectUrl>https://github.com/tutugeorge/RestClent</projectUrl>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Helper class for HttpClient</description>
     <releaseNotes>Added GET and POST methods</releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <tags>Tag1 Tag2</tags>
+    <tags>pcl, xamarin.forms</tags>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="10.0.3" />
     </dependencies>
   </metadata>
+  <files>
+   <file src="RestClientPackage\bin\Release\RestClientPackage.dll" target="lib\portable-net45+wp80+win8+wpa81\RestClientPackage.dll" />    
+     <file src="RestClientPackage\bin\Release\RestClientPackage.pdb" target="lib\portable-net45+wp80+win8+wpa81\RestClientPackage.pdb" />
+  </files>
 </package>
