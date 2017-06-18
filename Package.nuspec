@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Helper.HttpClient</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>HttpClient Helper for Xamarin Forms</title>
     <authors>Tutu George</authors>
     <owners>Tutu George</owners>    
