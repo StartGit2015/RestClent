@@ -2,22 +2,30 @@
 <package >
   <metadata>
     <id>Helper.HttpClient</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>HttpClient Helper for Xamarin Forms</title>
     <authors>Tutu George</authors>
     <owners>Tutu George</owners>    
     <projectUrl>https://github.com/tutugeorge/RestClent</projectUrl>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Helper class for HttpClient</description>
-    <releaseNotes>Added GET and POST methods</releaseNotes>
+    <description>
+      This helper class allows you to invoke RESTful services with JSON 
+      response type with ease.
+    </description>
+    <releaseNotes>
+      [1.0.2]
+      Added POST method
+      [1.0.1]
+      Added GET and PUT methods
+    </releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <tags>pcl, xamarin.forms</tags>
+    <tags>pcl, xamarin.forms, REST, json, httpclient</tags>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="10.0.3" />
     </dependencies>
   </metadata>
   <files>
-   <file src="RestClientPackage\bin\Release\RestClientPackage.dll" target="lib\portable-net45+wp80+win8+wpa81\RestClientPackage.dll" />    
-     <file src="RestClientPackage\bin\Release\RestClientPackage.pdb" target="lib\portable-net45+wp80+win8+wpa81\RestClientPackage.pdb" />
+    <file src="RestClientPackage\bin\Release\RestClientPackage.dll" target="lib\portable-net45+wp80+win8+wpa81\RestClientPackage.dll" />    
+    <file src="RestClientPackage\bin\Release\RestClientPackage.pdb" target="lib\portable-net45+wp80+win8+wpa81\RestClientPackage.pdb" />
   </files>
 </package>
