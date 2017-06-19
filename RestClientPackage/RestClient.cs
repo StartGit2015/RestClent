@@ -12,11 +12,21 @@ namespace RestClientPackage
 {
     public class RestClient : HttpClient
     {
+        /// <summary>
+        /// Injects the authorization token to header
+        /// </summary>
+        /// <param name="token">access token</param>
         public void InjectAuthorizationToken(string token)
         {
             DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
 
+        /// <summary>
+        /// Method to invoke GET operation
+        /// </summary>
+        /// <typeparam name="T">Response type</typeparam>
+        /// <param name="uri">target url</param>
+        /// <returns>Task of type T</returns>
         public async Task<T> GetAsync<T>(string uri)
         {            
             HttpResponseMessage response = null;
@@ -28,6 +38,14 @@ namespace RestClientPackage
             return await GetReponseObject<T>(response);
         }
 
+        /// <summary>
+        /// Method to invoke POST operation
+        /// </summary>
+        /// <typeparam name="T">Request type</typeparam>
+        /// <typeparam name="U">Response type</typeparam>
+        /// <param name="uri">target url</param>
+        /// <param name="obj">Request object</param>
+        /// <returns>Task of type U</returns>
         public async Task<U> PostAsync<T, U>(string uri, T obj)
         {
             var json = JsonConvert.SerializeObject(obj);
@@ -39,6 +57,14 @@ namespace RestClientPackage
             return await GetReponseObject<U>(response);
         }
 
+        /// <summary>
+        /// Method to invokde PUT operation
+        /// </summary>
+        /// <typeparam name="T">Request type</typeparam>
+        /// <typeparam name="U">Response type</typeparam>
+        /// <param name="uri">Target url</param>
+        /// <param name="obj">Request object</param>
+        /// <returns>Task of type U</returns>
         public async Task<U> PutAsync<T, U>(string uri, T obj)
         {
             var json = JsonConvert.SerializeObject(obj);
