@@ -76,6 +76,21 @@ namespace RestClientPackage
             return await GetReponseObject<U>(response);
         }
 
+        /// <summary>
+        /// Method to invoke DELETE operation
+        /// </summary>
+        /// <typeparam name="T">Response type</typeparam>
+        /// <param name="uri">target url</param>
+        /// <returns>Task of type T</returns>
+        public async Task<T> DeleteAsync<T>(Uri uri)
+        {
+            HttpResponseMessage response = null;
+
+            response = await DeleteAsync(uri);
+
+            return await GetReponseObject<T>(response);            
+        }
+
         private async Task<T> GetReponseObject<T>(HttpResponseMessage response)
         {
             var serializer = new JsonSerializer() { NullValueHandling = NullValueHandling.Ignore };
