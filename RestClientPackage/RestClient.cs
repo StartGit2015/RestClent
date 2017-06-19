@@ -28,6 +28,17 @@ namespace RestClientPackage
             return await GetReponseObject<T>(response);
         }
 
+        public async Task<U> PostAsync<T, U>(string uri, T obj)
+        {
+            var json = JsonConvert.SerializeObject(obj);
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = null;
+            response = await PutAsync(uri, content);
+
+            return await GetReponseObject<U>(response);
+        }
+
         public async Task<U> PutAsync<T, U>(string uri, T obj)
         {
             var json = JsonConvert.SerializeObject(obj);
