@@ -2,11 +2,12 @@
 <package >
   <metadata>
     <id>Helper.HttpClient</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>HttpClient Helper for Xamarin Forms</title>
     <authors>Tutu George</authors>
     <owners>Tutu George</owners>    
-    <projectUrl>https://github.com/tutugeorge/RestClent</projectUrl>    
+    <projectUrl>https://github.com/tutugeorge/RestClent</projectUrl>
+    <licenseUrl>https://github.com/tutugeorge/RestClent/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       This helper class allows you to invoke RESTful services with JSON 
@@ -14,12 +15,14 @@
     </description>
     <releaseNotes>
       
+      [1.0.4]
+      Ability to accept custom headers
       [1.0.3]
       Added DELETE method
       [1.0.2]
       Added POST method
       [1.0.1]
-      Added GET and PUT methods
+      Added GET and PUT methods      
       
     </releaseNotes>
     <copyright>Copyright 2017</copyright>

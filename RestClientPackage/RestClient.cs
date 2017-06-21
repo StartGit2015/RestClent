@@ -13,6 +13,20 @@ namespace RestClientPackage
     public class RestClient : HttpClient
     {
         /// <summary>
+        /// Add custom http header
+        /// </summary>
+        /// <param name="key">header name</param>
+        /// <param name="value">header value</param>
+        public void InjectHeader(string key, string value)
+        {
+            if (DefaultRequestHeaders.Contains(key))
+            {
+                DefaultRequestHeaders.Remove(key);
+            }
+            DefaultRequestHeaders.Add(key, value);
+        }
+
+        /// <summary>
         /// Injects the authorization token to header
         /// </summary>
         /// <param name="token">access token</param>
